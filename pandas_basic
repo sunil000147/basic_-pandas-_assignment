@@ -1,0 +1,332 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "89fd0da4-d55e-4011-b29e-2448c93f65e6",
+   "metadata": {},
+   "source": [
+    "Q1. Create a Pandas Series that contains the following data: 4, 8, 15, 16, 23, and 42. Then, print the series."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "97bbcd2d-da0d-478f-9761-753b66e62ad4",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "d9164f8f-d50f-4e8d-9aa1-5e66ee88ffa9",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "data = 4,8,15,16,23,42"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "dfbae5ec-aba0-439c-a67e-b5001e908fc0",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    " new_data = list(data)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "d3f2f788-32aa-4cac-bbfa-870ac1f46244",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[4, 8, 15, 16, 23, 42]"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "new_data"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "33bfd52a-d3ec-4f74-a1c4-dbd65008f891",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0     4\n",
+      "1     8\n",
+      "2    15\n",
+      "3    16\n",
+      "4    23\n",
+      "5    42\n",
+      "dtype: int64\n"
+     ]
+    }
+   ],
+   "source": [
+    "series = pd.Series(new_data)\n",
+    "print(series)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "257453e3-2eb4-4af4-9fd1-d049e51b4e7e",
+   "metadata": {},
+   "source": [
+    " Q2. Create a variable of list type containing 10 elements in it, and apply pandas.Series function on the\n",
+    "variable print it."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "9c749892-9b58-4416-b090-e3b361314a66",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0     1\n",
+      "1     2\n",
+      "2     3\n",
+      "3     4\n",
+      "4     5\n",
+      "5     6\n",
+      "6     7\n",
+      "7     8\n",
+      "8     9\n",
+      "9    10\n",
+      "dtype: int64\n"
+     ]
+    }
+   ],
+   "source": [
+    "list = [1,2,3,4,5,6,7,8,9,10]\n",
+    "series = pd.Series(list)\n",
+    " \n",
+    "print(series)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7888a95e-a3b1-4003-b49e-636032a3b5b3",
+   "metadata": {},
+   "source": [
+    " Q3. Create a Pandas DataFrame that contains the following data:\n",
+    " \n",
+    " \n",
+    " "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "87ffd1eb-281b-4e28-bea9-948dc4996cb7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "     Name  Age  Gender\n",
+      "0   Alice   25  Female\n",
+      "1     Bob   30    Male\n",
+      "2  Claire   27  Female\n"
+     ]
+    }
+   ],
+   "source": [
+    "dict = { ' Name': ['Alice', 'Bob', 'Claire'], 'Age': [ 25, 30, 27], 'Gender':[ 'Female', 'Male', 'Female']}\n",
+    "Data_Frame = pd.DataFrame(dict)\n",
+    "\n",
+    "print(Data_Frame)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "322405e9-bc94-4727-9b38-3d9113fed8ca",
+   "metadata": {},
+   "source": [
+    "Q4. What is ‘DataFrame’ in pandas and how is it different from pandas.series? Explain with an example.\n",
+    "\n",
+    "Ans. In Pandas, a DataFrame is a two-dimensional, size-mutable, and tabular data structure that consists of rows and columns.\n",
+    "\n",
+    "A Series in Pandas is a one-dimensional array-like object that can hold any data type, such as integers, floats, strings, and so on. It has an index that is used to label and access the values of the Series.\n",
+    "\n",
+    "The primary differences between a Pandas DataFrame and a Pandas Series are:\n",
+    "\n",
+    "A DataFrame can contain multiple columns with different data types, while a Series contains a single column of data with a single data type.\n",
+    "A DataFrame has both row and column labels, whereas a Series has only one index that refers to the rows.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "92ceb9a7-249f-41e5-b8ac-29f7de825cb4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0        Apple\n",
+      "1       Banana\n",
+      "2        Mango\n",
+      "3       Orange\n",
+      "4    Pineapple\n",
+      "dtype: object\n",
+      "    Name  Age  Gender\n",
+      "0   John   25    Male\n",
+      "1  Sarah   32  Female\n",
+      "2    Tom   18    Male\n",
+      "3    Amy   41  Female\n"
+     ]
+    }
+   ],
+   "source": [
+    "## Here's an example to illustrate the differences between a DataFrame and a Series.\n",
+    "\n",
+    "# Creating a Series object\n",
+    "fruits = pd.Series(['Apple', 'Banana', 'Mango', 'Orange', 'Pineapple'])\n",
+    "print(fruits)\n",
+    "\n",
+    "\n",
+    "\n",
+    "# Creating a DataFrame object\n",
+    "df = pd.DataFrame({\n",
+    "    'Name': ['John', 'Sarah', 'Tom', 'Amy'],\n",
+    "    'Age': [25, 32, 18, 41],\n",
+    "    'Gender': ['Male', 'Female', 'Male', 'Female']\n",
+    "})\n",
+    "print(df)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "28275c80-3925-4dd9-8b09-5aad3c1f5215",
+   "metadata": {},
+   "source": [
+    "Q5. What are some common functions you can use to manipulate data in a Pandas DataFrame? Can\n",
+    "you give an example of when you might use one of these functions?\n",
+    "\n",
+    " ans. head() - This function returns the first n rows of the DataFrame. It is useful for quickly inspecting the data.\n",
+    "\n",
+    "tail() - This function returns the last n rows of the DataFrame. It is useful for quickly inspecting the data.\n",
+    "\n",
+    "describe() - This function provides a summary of statistics for each column of the DataFrame, such as count, mean, standard deviation, minimum, maximum, and quartiles.\n",
+    "\n",
+    "sort_values() - This function sorts the rows of the DataFrame by one or more columns. It is useful for finding the highest or lowest values in a column.\n",
+    "\n",
+    "groupby() - This function groups the rows of the DataFrame by one or more columns, allowing you to aggregate the data in various ways. For example, you can calculate the mean, median, or sum of a column for each group."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ff132e21-5ba0-4124-87d7-1f6cedfbfb7b",
+   "metadata": {},
+   "source": [
+    "Q6. Which of the following is mutable in nature Series, DataFrame, Panel?\n",
+    "\n",
+    "In Pandas, both Series and DataFrame are mutable in nature, which means that we can modify their values, add or remove rows and columns, or change their structure after they are created.\n",
+    "\n",
+    "However, Panel is not as commonly used as Series and DataFrame and has been deprecated since version 0.25.0. Instead, Pandas recommends the use of multi-dimensional arrays and DataFrames with hierarchical indexing as a replacement for Panel. Nonetheless, like DataFrame, Panel is also mutable in nature."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "64320539-7a4f-465c-aae0-8895183c687d",
+   "metadata": {},
+   "source": [
+    "Q7. Create a DataFrame using multiple Series. Explain with an example."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f0027e78-3d8d-4a83-b2ce-58775091c2b4",
+   "metadata": {},
+   "source": [
+    "Ans. We can create a DataFrame using multiple Series by passing a dictionary of Series to the DataFrame constructor. The keys of the dictionary will become the column names of the DataFrame, and the values of the dictionary will become the data for each column.\n",
+    "\n",
+    "Here's an example:\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "46d0c385-acd5-4dd3-be4f-1859f1dc79ec",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "      Name  Grade  Age\n",
+      "0    Alice     90   20\n",
+      "1      Bob     85   21\n",
+      "2  Charlie     95   19\n"
+     ]
+    }
+   ],
+   "source": [
+    "#\n",
+    "\n",
+    "# create a Series for the names of the students\n",
+    "names = pd.Series(['Alice', 'Bob', 'Charlie'])\n",
+    "\n",
+    "# create a Series for the grades of the students\n",
+    "grades = pd.Series([90, 85, 95])\n",
+    "\n",
+    "# create a Series for the ages of the students\n",
+    "ages = pd.Series([20, 21, 19])\n",
+    "\n",
+    "# create a dictionary of Series\n",
+    "data = {'Name': names, 'Grade': grades, 'Age': ages}\n",
+    "\n",
+    "# create a DataFrame from the dictionary of Series\n",
+    "df = pd.DataFrame(data)\n",
+    "\n",
+    "# print the DataFrame\n",
+    "print(df)\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
